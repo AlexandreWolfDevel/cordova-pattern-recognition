@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-pattern-recognition"
+        version="1.0.0">
+
+  <name>Pattern Recognition</name>
+
+  <description>
+    Pattern Recognition Software
+  </description>
+
+  <license>Still open</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/pattern-recognition.js" name="Pattern-Recognition">
+    <clobbers target="window.plugins.pattern-recognition" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="PatternRecognition">
+        <param name="android-package" value="br.univates.plugins.Insomnia" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/br/univates/plugins/PatternRecognition.java" target-dir="src/br/univates/plugins"/>
+  </platform>
+
+</plugin>

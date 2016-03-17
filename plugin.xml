@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="br.univates.patternrecognition"
-        version="0.7.0">
+        id="cordova.plugin.patternrecognition"
+        version="0.0.1a">
 
   <name>PatternRecognition</name>
 
@@ -19,7 +19,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="PatternRecognition">
-        <param name="android-package" value="br.univates.patternrecognition"/>
+        <param name="android-package" value="cordova.plugin.patternrecognition"/>
       </feature>
     </config-file>
 

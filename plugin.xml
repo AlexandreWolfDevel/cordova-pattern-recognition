@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="cordova.plugin.patternrecognition"
-        version="0.0.1a">
+        id="com.example.patternrecognition"
+        version="0.0.1">
 
   <name>PatternRecognition</name>
 
@@ -19,11 +19,27 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="PatternRecognition">
-        <param name="android-package" value="cordova.plugin.patternrecognition"/>
+        <param name="android-package" value="com.example.plugin.PatternRecognition"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/PatternRecognition.java" target-dir="src/br/univates/plugin/"/>
+    <source-file src="src/android/PatternRecognition.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="PatternRecognition">
+        <param name="ios-package" value="HWPPatternRecognition" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/HWPPatternRecognition.h" target-dir="PatternRecognitionPlugin"/>
+    <source-file src="src/ios/HWPPatternRecognition.m" target-dir="PatternRecognitionPlugin"/>
+  </platform>
+
+  <platform name="wp7">
+    <source-file src="src/wp7/PatternRecognition.cs"/>
   </platform>
 
 </plugin>
